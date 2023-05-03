@@ -8,3 +8,15 @@ export function login(username,password){
     })
 
 }
+
+export function register(fullname,birth,email,password,phone){
+
+    return axios.post("/admin/register",{
+        fullname,
+        birth,
+        email,
+        password,
+        phone
+    })
+
+}
