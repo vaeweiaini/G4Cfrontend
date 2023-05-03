@@ -18,17 +18,39 @@
          </div>
          <el-form ref="fromRef" :rules= "rules" :model="form" class="w-[250px]">
 
+
+
             <el-form-item prop="fullname">
                <el-input v-model="form.fullname" placeholder="full name">
                   
                </el-input>
             </el-form-item>
 
+            <el-form-item prop="country">
+                <el-select v-model="form.country" placeholder="country">
+                    <el-option
+                    v-for="item in country_list"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value"
+                    />
+                </el-select>
+            </el-form-item>
+            
+            <el-form-item prop="birth">                
+                <div class="block">
+                 <el-date-picker v-model="form.birth" type="date" placeholder="date of birth" :size= "'default'"/>
+                </div>
+            </el-form-item>
+            
+
             <el-form-item prop="birth">
                <el-input v-model="form.birth" placeholder="date of birth (yyyy/mm/dd)">
                   
                </el-input>
             </el-form-item>
+
+            <el-divider />
 
             <el-form-item prop="email">
                <el-input v-model="form.email" placeholder="email (this will be you userID)">    
@@ -55,11 +77,23 @@
                </el-input>
             </el-form-item>
 
+            <el-divider />
+            
+            <el-form-item prop="area_code">
+                <el-select v-model="form.area_code" placeholder="area code">
+                    <el-option
+                    v-for="item in area_code"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value"
+                    />
+                </el-select>
+            </el-form-item>
+            
             <el-form-item prop="phone">
                <el-input v-model="form.phone" placeholder="phone number (without +1)">
                </el-input>
             </el-form-item>
-
 
             <el-form-item>
                <el-button round color='#626aef' class="w-[250px]" type="primary" @click="onSubmit">Register</el-button>
@@ -140,6 +174,36 @@ const rules = {
 
 const fromRef = ref(null)
 
+const country_list = [
+  {
+    value: 'Canada',
+    label: 'Canada',
+  },
+  {
+    value: 'USA',
+    label: 'USA',
+  },
+  {
+    value: 'China',
+    label: 'China',
+  },
+]
+
+const area_code= [
+  {
+    value: '+1',
+    label: '+1 Canada',
+  },
+  {
+    value: '+1',
+    label: '+1 USA',
+  },
+  {
+    value: '+86',
+    label: '+86 China',
+  },
+]
+
 
 const onSubmit = () => {
    fromRef.value.validate((valid)=>{
@@ -195,5 +259,11 @@ const onSubmit = () => {
 }
 .right .line{
    @apply h-[1px] w-16 bg-gray-500;
+}
+.demo-date-picker .block {
+  padding: 30px 0;
+  text-align: center;
+  border-right: solid 1px var(--el-border-color);
+  flex: 1;
 }
 </style>
