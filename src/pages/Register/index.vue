@@ -212,7 +212,7 @@ const onSubmit = () => {
          return false
       }
       console.log("验证通过")
-      login(form.fullname,form.birth,form.email,form,password,form.phone)
+      register(form.fullname,form.birth,form.email,form.password,form.phone)
       .then(res=>{
          console.log(res.data)
          ElNotification({
