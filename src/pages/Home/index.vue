@@ -108,6 +108,71 @@
       <el-menu-item index="1">new arrivals</el-menu-item>
 
     </el-menu>
+    ////////////////////
+
+
+
+    <el-page-header :icon="null">
+    <template #content>
+      <div class="flex items-center">
+        <el-avatar
+          :size="32"
+          class="mr-3"
+          src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+        />
+        <span class="text-large font-600 mr-3"> Title </span>
+        <span class="text-sm mr-2" style="color: var(--el-text-color-regular)">
+          Sub title
+        </span>
+        <el-tag>Default</el-tag>
+      </div>
+    </template>
+    <template #extra>
+      <div class="flex items-center">
+        <el-button>Print</el-button>
+        <el-button type="primary" class="ml-2">Edit</el-button>
+      </div>
+    </template>
+  </el-page-header>
+  /////////////////////////
+
+    <h1 align="center"> hoihiii</h1>
+    <el-row class="Product-container">
+     
+      <el-col :lg="6" :md="6" class="product">
+       <div class="row" align="center">
+					 <div class="col-md-3"><a href="./about.html"><img src="image/1.png" width="250" height="200" /></a></div>
+				</div>
+            <div class="row" align="center">
+					 <div class="col-md-3"><h2>Fig.1 工程模式</h2></div>
+				</div>
+      </el-col>
+      <el-col :lg="6" :md="6" class="product">
+         <div class="row" align="center">
+					 <div class="col-md-3"><a href="./about.html"><img src="image/1.png" width="250" height="200" /></a></div>
+				</div>
+            <div class="row" align="center">
+					 <div class="col-md-3"><h2>Fig.1 工程模式</h2></div>
+				</div>
+      </el-col>
+      <el-col :lg="6" :md="6" class="product">
+         <div class="row" align="center">
+					 <div class="col-md-3"><a href="./about.html"><img src="image/1.png" width="250" height="200" /></a></div>
+				</div>
+            <div class="row" align="center">
+					 <div class="col-md-3"><h2>Fig.1 工程模式</h2></div>
+				</div>
+      </el-col>
+      <el-col :lg="6" :md="6" class="product">
+         <div class="row" align="center">
+					 <div class="col-md-3"><a href="./about.html"><img src="image/1.png" width="250" height="200" /></a></div>
+				</div>
+            <div class="row" align="center">
+					 <div class="col-md-3"><h2>Fig.1 工程模式</h2></div>
+				</div>
+      </el-col>
+    </el-row>
+
   </template>
 
 
@@ -129,7 +194,7 @@ const form = reactive({
    //   desc: '',
 })
 const rules = {
-   username:[{
+   username:[{ 
       required: true,
       message: '用户名不能为空',
       trigger: 'blur'
