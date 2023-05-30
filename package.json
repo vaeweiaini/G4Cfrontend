@@ -6,9 +6,9 @@
         "dev": "vite --open",
         "build": "vite build",
         "preview": "vite preview"
-      },
+    },
     "dependencies": {
-      "@element-plus/icons-vue": "^0.2.7",
+        "@element-plus/icons-vue": "^0.2.7",
         "@tinymce/tinymce-vue": "^4.0.7",
         "@vueuse/core": "^7.7.1",
         "@vueuse/integrations": "^7.7.1",
@@ -24,31 +24,30 @@
         "vuex": "^4.0.2"
     },
     "devDependencies": {
-      "@vitejs/plugin-vue": "^2.2.4",
+        "@vitejs/plugin-vue": "^2.2.4",
         "vite": "^2.8.6",
         "vite-plugin-windicss": "^1.8.3",
         "windicss": "^3.5.1"
     },
     "eslintConfig": {
-      "root": true,
-      "env": {
-        "node": true
-      },
-      "extends": [
-        "plugin:vue/essential",
-        "eslint:recommended"
-      ],
-      "parserOptions": {
-        "parser": "babel-eslint"
-      },
-      "rules": {
-        "no-irregular-whitespace": "off"
-      }
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {
+            "no-irregular-whitespace": "off"
+        }
     },
     "browserslist": [
-      "> 1%",
-      "last 2 versions",
-      "not dead"
+        "> 1%",
+        "last 2 versions",
+        "not dead"
     ]
-  }
-  
+}
