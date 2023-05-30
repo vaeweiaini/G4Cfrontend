@@ -40,7 +40,10 @@
                <el-button round color='#626aef' class="w-[250px]" type="primary" @click="onSubmit">登 录</el-button>
             </el-form-item>
          </el-form>
-      </el-col>
+
+         <a href="http://localhost:3000/#/register">If you do not have a account. Click here</a>
+
+      </el-col>     
    </el-row>
 </template>
 
